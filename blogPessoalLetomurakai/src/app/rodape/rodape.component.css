@@ -1,0 +1,29 @@
+ul.social{
+    list-style: none;
+}
+
+ul.social li{
+    display: inline;
+    margin: 0;
+    padding: 10px;
+}
+
+.fab{
+    font-size: 5em;
+    color: white;
+}
+
+.icon-facebook:hover{
+    color: lightskyblue;
+}
+
+.icon-instagram:hover{
+    color: lightpink;
+}
+.icon-linkedin:hover{
+    color: dodgerblue;
+}
+
+.icon-github:hover{
+    color: lightslategrey;
+}
