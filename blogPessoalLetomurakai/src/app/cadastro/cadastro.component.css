@@ -5,3 +5,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.blur{
+    background: rgba(0, 0, 0, 0.100);
+    backdrop-filter: saturate(180%) blur(10px); /* Chrome and Opera */
+}
+.btn-rounded{
+    border-radius: 2rem;
+}
+.form-control{
+    border-radius: 2rem;
+}
