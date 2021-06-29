@@ -12,26 +12,26 @@
                     <h1 class="display-4 mt-5 mt-md-0 text-center mb-3">Cadastro</h1>
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Qual seu nome ?">
+                        <input [(ngModel)]='usuario.nome' type="text" class="form-control" name="nome" id="nome" placeholder="Qual seu nome ?">
 
                         <label for="usuario">Usuário</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario"
+                        <input [(ngModel)]='usuario.usuario' type="text" class="form-control" name="usuario" id="usuario"
                             placeholder="Digite um usuário">
 
                         <label for="foto">Link da foto</label>
-                        <input type="text" class="form-control" name="foto" id="foto" placeholder="Link da foto aqui">
+                        <input [(ngModel)]='usuario.foto' type="text" class="form-control" name="foto" id="foto" placeholder="Link da foto aqui">
 
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" name="senha" id="senha"
+                        <input (input)='confirmSenha($event)' type="password" class="form-control" name="senha" id="senha"
                             placeholder="digite sua senha">
 
                         <label for="confirmPassword">Confirme sua senha</label>
-                        <input type="password" class="form-control" name="senha" id="confirm"
+                        <input [(ngModel)]='usuario.senha' type="password" class="form-control" name="senha" id="confirm"
                             placeholder="confirme sua senha">
 
                         <div>
                             <label for="foto">Tipo de Usuário</label>
-                            <select class="form-control" name="tipo" id="tipo">
+                            <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
                                 <option>Selecione um tipo de usuário:</option>
                                 <option value="normal">Usuário</option>
                                 <option value="adm">Admin</option>
@@ -40,7 +40,7 @@
 
                         <div class="d-flex justify-content-center mt-2">
                             <button class="btn mr-4" type="submit" routerLink='/login'>CANCELAR</button>
-                            <button class="btn btn-outline-info btn-rounded btn-lg" type="submit">CADASTRAR</button>
+                            <button class="btn btn-outline-info btn-rounded btn-lg" type="submit" (click)='cadastrar()'>CADASTRAR</button>
                         </div>
                     </div>
 
