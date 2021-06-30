@@ -9,19 +9,20 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-md-6">
 
-                    <h1 class="display-4 mt-5 mt-md-0 text-center mb-3">Sejá bem vindo!</h1>
+                    <h1 class="display-4 mt-5 mt-md-0 text-center mb-3 text-white">Sejá bem vindo!</h1>
                     <div class="form-group">
-                        <label for="usuario">Usuario</label>
-                        <input [(ngModel)]='UsLogin.usuario' type="text" class="form-control btn-rounded" name="usuario" id="usuario" placeholder="digite seu e-mail/usuario">
-                        <label for="senha">Senha</label>
-                        <input [(ngModel)]='UsLogin.senha' type="password" class="form-control btn-rounded" name="senha" id="senha" placeholder="digite sua senha">
+                        <label for="usuario" class="text-white mb-0 mt-2 ml-3">Usuario</label>
+                        <input [(ngModel)]='UsLogin.usuario' type="text" class="form-control btn-rounded bg-dark" name="usuario" id="usuario" placeholder="digite seu e-mail/usuario">
+                        
+                        <label for="senha" class="text-white mb-0 mt-2 ml-3">Senha</label>
+                        <input [(ngModel)]='UsLogin.senha' type="password" class="form-control btn-rounded bg-dark" name="senha" id="senha" placeholder="digite sua senha">
 
-                        <div class="d-flex justify-content-center mt-2">
-                            <button class="btn btn-outline-success btn-lg btn-rounded" type="submit" (click)='entrar()'>Entrar</button>
+                        <div class="d-flex justify-content-center mt-3 mb-0">
+                            <button class="btn btn-outline-success btn-lg btn-rounded bg-dark w-100" type="submit" (click)='entrar()'>Entrar</button>
                         </div>
 
                         <hr class="mt-5 mb-5">
-                        <p class="text-center">
+                        <p class="text-center text-white">
                             <small>Não tem uma conta ? <a routerLink='/cadastro'> cadastre-se</a></small>
                         </p>
                     </div>
