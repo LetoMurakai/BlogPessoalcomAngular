@@ -2,9 +2,9 @@
 
     <div class="row bg-info">
 
-        <div class="col-12 text-white">
+        <div class="col-12 text-white p-4">
 
-            <a routerLink='/inicio' class="text-left text-white">voltar ao inicio</a>
+            <a routerLink='/inicio' class="text-left text-white sticky-top">voltar ao inicio</a>
 
             <h2 class="display-1 text-center">Temas</h2>
             <h5 class="text-white text-center">Veja aqui os temas cadastrados ou cadastre um novo.</h5>
@@ -12,8 +12,8 @@
         </div>
 
     </div>
-    <div class="row d-flex justify-content-center mt-4 mb-5">
-        <div class="col-12">
+    <div class="row d-flex justify-content-center mt-4 mb-5 p-4">
+        <div class="col-12 w-50">
             <div class="form-group">
                 <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
             </div>
@@ -47,8 +47,8 @@
                     <th>{{tema.id}}</th>
                     <td>{{tema.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                      <button class="btn btn-info mr-3"><i class="fas fa-pencil-alt"></i></button>
-                      <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                      <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', tema.id]"><i class="fas fa-pencil-alt"></i></button>
+                      <button class="btn btn-danger" [routerLink]="['/tema-delete', tema.id]"><i class="fas fa-trash"></i></button>
                     </td>
                   </tr>
                 </tbody>

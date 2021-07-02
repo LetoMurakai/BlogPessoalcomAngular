@@ -1,3 +1,5 @@
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { InicioComponent } from './inicio/inicio.component';
@@ -14,8 +16,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'tema', component: TemaComponent }
+  { path: 'tema', component: TemaComponent },
 
+  { path: 'tema-edit/:id', component: TemaEditComponent },
+  { path: 'tema-delete/:id', component: TemaDeleteComponent }
 ];
 
 @NgModule({
